@@ -75,9 +75,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String task = etTask.getText().toString();
 
-                alTasks.add(alTasks.size(), task);
-                aaTasks.notifyDataSetChanged();
-                etTask.setText("");
+                if (etTask.getText().toString().trim().length() == 0){
+                    Toast.makeText(MainActivity.this, "Text field is empty", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    alTasks.add(alTasks.size(), task);
+                    aaTasks.notifyDataSetChanged();
+                    etTask.setText("");
+                }
             }
         });
 
