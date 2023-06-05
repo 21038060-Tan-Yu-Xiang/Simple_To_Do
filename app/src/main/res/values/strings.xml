@@ -2,9 +2,11 @@
     <string name="app_name">Simple To Do</string>
     <string name="add">ADD</string>
     <string name="delete">DELETE</string>
-    <string name="clear">CLEAR</string>
+    <string name="clear">🗑️"   CLEAR"</string>
+    <string name="title">📋"   To-Do List"</string>
+    <string name="sampletext">sampleText</string>
     <string-array name="spinnerItems">
-        <item>Add a new task</item>
-        <item>Remove a task</item>
+        <item>➕"   Add a new task"</item>
+        <item>➖️"   Remove a task"️</item>
     </string-array>
 </resources>

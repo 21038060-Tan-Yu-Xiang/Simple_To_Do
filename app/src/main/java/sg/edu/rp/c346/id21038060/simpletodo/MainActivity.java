@@ -31,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("To-Do List");
-
         spnTask = findViewById(R.id.spnTask);
         etTask = findViewById(R.id.etTask);
         btnAdd = findViewById(R.id.btnAdd);
@@ -88,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (alTasks.size() == 0){
                     Toast.makeText(MainActivity.this, "You don't have any tasks to remove", Toast.LENGTH_SHORT).show();
+                }
+                else if (etTask.getText().toString().trim().length() == 0){
+                    Toast.makeText(MainActivity.this, "Text field is empty", Toast.LENGTH_SHORT).show();
                 }
                 else {
                     int pos = Integer.parseInt(etTask.getText().toString());
